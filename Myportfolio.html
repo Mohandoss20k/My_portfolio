@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohan Doss | Portfolio</title>
+  <style>
+    /* ---------- General Styles ---------- */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0d1117; /* Dark background */
+      color: #e6edf3;      /* Light text */
+      scroll-behavior: smooth;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      background: linear-gradient(135deg, #1f4068, #2a5298, #4e9f3d);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.4);
+    }
+    header p {
+      margin: 15px 0 0;
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    /* Typing effect */
+    .typing {
+      border-right: 3px solid #ffcc00;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typing 4s steps(30, end), blink 0.8s infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* ---------- Navigation ---------- */
+    nav {
+      background: #161b22;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+    }
+    nav a {
+      color: #e6edf3;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+    nav a:hover {
+      color: #58a6ff;
+      transform: scale(1.1);
+    }
+
+    /* ---------- Section ---------- */
+    section {
+      padding: 60px 20px;
+      max-width: 950px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease-in-out;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      font-size: 2rem;
+      border-left: 6px solid #4e9f3d;
+      padding-left: 12px;
+      margin-bottom: 25px;
+      color: #58a6ff;
+      text-shadow: 0 0 6px rgba(88,166,255,0.6);
+    }
+
+    /* ---------- Skills ---------- */
+    .skills span {
+      display: inline-block;
+      background: linear-gradient(135deg, #4e9f3d, #2a5298);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      margin: 8px;
+      font-size: 0.95rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    .skills span:hover {
+      transform: translateY(-6px) scale(1.1);
+      box-shadow: 0 0 15px #4e9f3d, 0 0 25px #2a5298;
+    }
+
+    /* ---------- Lists (Projects, Education, Achievements) ---------- */
+    .projects li, .education li, .achievements li {
+      background: #161b22;
+      margin: 15px 0;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 6px solid #4e9f3d;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .projects li:hover, .education li:hover, .achievements li:hover {
+      transform: translateX(12px);
+      border-color: #58a6ff;
+      box-shadow: 0 8px 20px rgba(88,166,255,0.6);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: #161b22;
+      color: #e6edf3;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.95rem;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.6);
+    }
+    footer a {
+      color: #4e9f3d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer a:hover {
+      color: #58a6ff;
+    }
+
+    /* ---------- Animations ---------- */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="typing">Mohan Doss K</h1>
+    <p>Computer Science Engineer | Java | Python | Data Science</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a Computer Science Engineering student at Dr.N.G.P Institute of Technology, passionate about software development, data science, and building innovative solutions. I enjoy working on projects that combine creativity and technology.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="education">
+      <li><b>B.E. CSE</b> - Dr.N.G.P Institute of Technology (2022-2026) | CGPA: 7.78</li>
+      <li><b>HSC</b> - Velammal Vidyalaya (2022) | 74.4%</li>
+      <li><b>SSLC</b> - The Spice Valley Public School (2020) | 70%</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <span>Java</span>
+      <span>Python</span>
+      <span>MySQL</span>
+      <span>HTML & CSS</span>
+      <span>Data Science</span>
+      <span>MS Excel</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul class="projects">
+      <li>All-Terrain Surface Mover with C-type tires for rugged terrains.</li>
+      <li>Predictive Pricing System for land deal valuation using data analysis.</li>
+      <li>IoT-based LPG Gas Detection System with automatic shut-off valve.</li>
+      <li>"Voice of the Streets" – NLP-powered civic complaint routing system.</li>
+    </ul>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements & Activities</h2>
+    <ul class="achievements">
+      <li>Paper Presentation on Crop Monitoring – Won 3rd Prize at CIET (2024).</li>
+      <li>Internship in Fullstack Development (Python) at Knovative Technology.</li>
+      <li>University Volleyball Player (2023-2026).</li>
+      <li>Captain of Dr. NGPiTech Volleyball Team (2024-2026).</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📞 Phone: 7904629329</p>
+    <p>📧 Email: <a href="mailto:kmohandoss04@gmail.com">kmohandoss04@gmail.com</a></p>
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/mohan-doss-k-985a03245/" target="_blank">Mohan Doss K</a></p>
+    <p>📍 Location: Coimbatore</p>
+  </section>
+
+  
+
+  <script>
+    // Show sections with fade-in effect on scroll
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          sec.classList.add("show");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
